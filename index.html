@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agus Slebew Fonts 😋 | 130+ Fonts Kekinian</title>
+    
+    <!-- Font Awesome 6 (FREE) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - LENGKAP SEMUA! -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght300;400;600;700;800&family=Lato:wght300;400;700;900&family=Oswald:wght200;300;400;500;600;700&family=Raleway:wght300;400;500;600;700;800;900&family=Ubuntu:wght300;400;500;700&family=Playfair+Display:wght400;500;600;700;800;900&family=Merriweather:wght300;400;700;900&family=Source+Code+Pro:wght300;400;500;600;700;800;900&family=Press+Start+2P&family=Comfortaa:wght300;400;500;600;700&family=Quicksand:wght300;400;500;600;700&family=Dancing+Script:wght400;500;600;700&family=Pacifico&family=Lobster&family=Righteous&family=Bebas+Neue&family=Anton&family=Orbitron:wght400;500;600;700;800;900&family=Audiowide&family=Exo+2:wght100;200;300;400;500;600;700;800;900&family=Share+Tech+Mono&family=VT323&family=Cinzel:wght400;500;600;700;800;900&family=UnifrakturMaguntia&family=Creepster&family=Nosifer&family=Berkshire+Swash&family=Metal+Mania&family=Eater&family=Yuji+Syuku&family=Noto+Serif+SC:wght400;500;700&family=Black+Han+Sans&family=Indie+Flower&family=Great+Vibes&family=Caveat:wght400;500;600;700&family=Parisienne&family=Architects+Daughter&family=Permanent+Marker&family=Kalam:wght300;400;700&family=Allura&family=Comic+Neue:wght300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS (akan dibuat terpisah) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="gradient-bg" id="gradientBg"></div>
+    <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+    
+    <div class="container">
+        <!-- ========== HEADER ========== -->
+        <header class="header">
+            <div class="header-content">
+                <!-- Glitch Title -->
+                <h1 class="glitch-title" data-text="AGUS SLEBEW FONTS">AGUS SLEBEW FONTS</h1>
+                
+                <div class="title-badge-container">
+                    <span class="title-badge-left"><i class="fas fa-skull"></i></span>
+                    <span class="title-badge-main">😋 V3.0 RELOAD</span>
+                    <span class="title-badge-right"><i class="fas fa-fire"></i></span>
+                </div>
+                
+                <!-- Typing Animation -->
+                <div class="typing-container">
+                    <span class="static-text">🔥</span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="static-text">😈</span>
+                </div>
+                
+                <!-- Creator Card -->
+                <div class="creator-card">
+                    <div class="creator-avatar">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="creator-info">
+                        <span class="creator-label">CREATED BY</span>
+                        <span class="creator-name">AGUS SLEBEW</span>
+                    </div>
+                    <div class="creator-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>ORIGINAL</span>
+                    </div>
+                    <div class="creator-emoji">😋🔥</div>
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-font"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="statFonts">130</span>
+                            <span class="stat-label">Font Styles</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-copy"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="statCopies">0</span>
+                            <span class="stat-label">Total Copies</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="statUsers">2.5K</span>
+                            <span class="stat-label">Users Online</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-tags"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="statCategories">12</span>
+                            <span class="stat-label">Kategori</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main class="main-content">
+            <!-- LEFT PANEL - INPUT SECTION -->
+            <div class="input-panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-pencil-ruler"></i> TULIS TEKS LU</h2>
+                    <div class="panel-actions">
+                        <button class="action-btn" id="clearBtn" title="Hapus teks (Ctrl+E)">
+                            <i class="fas fa-eraser"></i>
+                        </button>
+                        <button class="action-btn" id="resetBtn" title="Reset ke default (Ctrl+R)">
+                            <i class="fas fa-undo-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Text Input Area -->
+                <div class="input-wrapper">
+                    <textarea 
+                        class="text-input" 
+                        id="inputText" 
+                        placeholder="Contoh: Halo Bro, ini teks keren buat TikTok..." 
+                        rows="5"
+                    >Halo Bro, ini teks keren buat TikTok!</textarea>
+                    
+                    <div class="input-tools">
+                        <div class="char-counter">
+                            <i class="far fa-keyboard"></i>
+                            <span id="charCount">0</span>/<span id="maxChar">500</span>
+                        </div>
+                        
+                        <div class="text-tools">
+                            <button class="tool-btn" id="uppercaseBtn" title="UPPERCASE (Ctrl+U)">
+                                <i class="fas fa-arrow-up"></i>
+                            </button>
+                            <button class="tool-btn" id="lowercaseBtn" title="lowercase (Ctrl+L)">
+                                <i class="fas fa-arrow-down"></i>
+                            </button>
+                            <button class="tool-btn" id="capitalizeBtn" title="Capitalize (Ctrl+P)">
+                                <i class="fas fa-font"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Action Buttons -->
+                <div class="quick-actions">
+                    <button class="quick-btn primary" id="copyAllBtn">
+                        <i class="fas fa-copy"></i>
+                        <span>COPY SEMUA FONTS</span>
+                    </button>
+                    <button class="quick-btn secondary" id="randomExampleBtn">
+                        <i class="fas fa-dice"></i>
+                        <span>RANDOM TEKS</span>
+                    </button>
+                </div>
+                
+                <!-- Live Preview Card -->
+                <div class="preview-card">
+                    <div class="preview-header">
+                        <i class="fas fa-eye"></i>
+                        <span>LIVE PREVIEW</span>
+                        <span class="preview-badge">REALTIME</span>
+                    </div>
+                    <div class="preview-content" id="livePreview">Halo Bro, ini teks keren buat TikTok!</div>
+                </div>
+            </div>
+
+            <!-- RIGHT PANEL - FONTS SECTION -->
+            <div class="fonts-panel">
+                <div class="panel-header sticky">
+                    <h2><i class="fas fa-magic"></i> 130+ FONTS STYLE</h2>
+                    
+                    <!-- Search Box -->
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            class="search-input" 
+                            id="searchInput" 
+                            placeholder="Cari fonts (nama/kategori)..."
+                            autocomplete="off"
+                        >
+                        <button class="search-clear" id="clearSearch" title="Clear search">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Category Tabs (Scrollable) -->
+                <div class="category-tabs-container">
+                    <div class="category-tabs" id="categoryTabs">
+                        <button class="category-tab active" data-category="all">
+                            <i class="fas fa-globe"></i> Semua
+                        </button>
+                        <button class="category-tab" data-category="tiktok">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </button>
+                        <button class="category-tab" data-category="instagram">
+                            <i class="fab fa-instagram"></i> IG
+                        </button>
+                        <button class="category-tab" data-category="whatsapp">
+                            <i class="fab fa-whatsapp"></i> WA
+                        </button>
+                        <button class="category-tab" data-category="glitch">
+                            <i class="fas fa-bolt"></i> Glitch
+                        </button>
+                        <button class="category-tab" data-category="cute">
+                            <i class="fas fa-heart"></i> Cute
+                        </button>
+                        <button class="category-tab" data-category="savage">
+                            <i class="fas fa-skull"></i> Savage
+                        </button>
+                        <button class="category-tab" data-category="gothic">
+                            <i class="fas fa-church"></i> Gothic
+                        </button>
+                        <button class="category-tab" data-category="handwriting">
+                            <i class="fas fa-pen-fancy"></i> Handwriting
+                        </button>
+                        <button class="category-tab" data-category="retro">
+                            <i class="fas fa-record-vinyl"></i> Retro
+                        </button>
+                        <button class="category-tab" data-category="future">
+                            <i class="fas fa-robot"></i> Future
+                        </button>
+                        <button class="category-tab" data-category="asia">
+                            <i class="fas fa-dragon"></i> Asia
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Fonts Grid -->
+                <div class="fonts-grid" id="fontsGrid">
+                    <!-- Akan diisi JavaScript -->
+                    <div class="loading-container">
+                        <div class="loading-spinner"></div>
+                        <span>Loading fonts...</span>
+                    </div>
+                </div>
+                
+                <!-- Load More Button (untuk infinite scroll nanti) -->
+                <div class="load-more-container" id="loadMoreContainer">
+                    <button class="load-more-btn" id="loadMoreBtn">
+                        <i class="fas fa-chevron-down"></i> Load More
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-skull"></i>
+                    <span>AGUS SLEBEW FONTS</span>
+                    <i class="fas fa-fire"></i>
+                </div>
+                
+                <div class="footer-info">
+                    <p>© 2024 | Dibuat dengan <i class="fas fa-heart" style="color: #ff0080;"></i> oleh <strong class="creator-name-footer">Agus Slebew 😋</strong></p>
+                    <p class="footer-tagline">130+ Font Styles | Free Forever | No Sensor | Gas Pol Abis! 🔥</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-link" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ========== TOAST NOTIFICATION ========== -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">
+            <i class="fas fa-check-circle" id="toastIcon"></i>
+        </div>
+        <div class="toast-content">
+            <span id="toastTitle">Berhasil!</span>
+            <span id="toastMessage">Teks berhasil dicopy</span>
+        </div>
+        <button class="toast-close" id="toastClose">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- ========== MODAL PREVIEW ========== -->
+    <div class="modal" id="fontModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Font Preview</h3>
+                <button class="modal-close" id="closeModalBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-preview" id="modalPreview">Halo Bro!</div>
+                <div class="modal-info" id="modalInfo"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn primary" id="modalCopyBtn">
+                    <i class="fas fa-copy"></i> Copy Teks
+                </button>
+                <button class="modal-btn secondary" id="modalCloseBtn">
+                    <i class="fas fa-times"></i> Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
